@@ -174,6 +174,7 @@ class S3Connection(AWSAuthConnection):
                  suppress_consec_slashes=True, anon=False,
                  validate_certs=None, profile_name=None):
         no_host_provided = False
+        host = 's3.eu-central-1.amazonaws.com'
         # Try falling back to the boto config file's value, if present.
         if host is NoHostProvided:
             host = boto.config.get('s3', 'host')
